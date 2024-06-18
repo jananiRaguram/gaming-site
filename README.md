@@ -4,15 +4,6 @@
  
 https://cis4250w24-10.socs.uoguelph.ca/
 
-## Wiki 
-
-https://gitlab.socs.uoguelph.ca/cis4250_w24/team_10/-/wikis/Logo-Memory-Game
-
-## Connecting to our VM
-
-1. ssh socs@cis4250w24-10.socs.uoguelph.ca
-2. password: ColdlyRippingSkylight
-
 ### NPM and Node
 
 In addition to converting our work from PHP over to React, we're also adding functionality related to the matching/memory game. At the moment this version can only be run locally but we plan on deploying it next sprint. To run this NPM and Node need to be installed. This can be done through install.sh
