@@ -1,0 +1,31 @@
+.bgImg {
+    height: 70vh;
+    opacity: 35%;
+}
+
+.decode-containter {
+    display: inline-block;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center; 
+}
+
+.btn-container .btn {
+    margin: 0 5px; 
+}
+
+.answer-label{
+    width: unset !important;
+}
+
+.encoded-phrase{
+    background-color: #135454;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    font-size: 18px;
+}

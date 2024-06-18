@@ -1,0 +1,73 @@
+/* .App { 
+	text-align: center; 
+}  */
+.app-title { 
+	color: green; 
+} 
+.app-subtitle { 
+	font-size: 18px; 
+} 
+.button-container { 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+} 
+.modal-button { 
+	margin: 10px; 
+} 
+.button-gap { 
+	width: 20px; 
+} 
+.custom-modal-1 .modal-content { 
+	background: linear-gradient( 
+		45deg, 
+		#ffd700, 
+		#ff6347
+	); 
+	color: white; 
+	border-radius: 10px; 
+	box-shadow: 0 0 10px
+		rgba(0, 0, 0, 0.2); 
+	transform: rotate(-3deg); 
+} 
+.custom-modal-1 .modal-content:hover { 
+	transform: scale(1.05) rotate(3deg); 
+	transition: transform 0.2s; 
+} 
+.custom-modal-2 .modal-content { 
+	background: linear-gradient( 
+		135deg, 
+		#00bfff, 
+		#ff6347
+	); 
+	color: white; 
+	border-radius: 20px; 
+	box-shadow: 0 0 15px
+		rgba(0, 0, 0, 0.3); 
+	opacity: 0.9; 
+} 
+.custom-modal-2 .modal-content:hover { 
+	transform: translateY(-5px); 
+	transition: transform 0.2s; 
+}
+
+
+.head {
+	text-align: center;
+}
+
+ul {
+	list-style-position: inside;
+}
+
+/* .hook {
+	text-align: center; 
+	line-height: 2; 
+	display: flex; 
+	font-size: 50px;
+	margin-bottom: 20px;
+	align-items: center; 
+	justify-content: center; 
+	font-weight: bold;
+	padding-top: 14vh;
+} */

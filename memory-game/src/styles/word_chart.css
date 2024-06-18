@@ -1,0 +1,73 @@
+.found-words-chart {
+  padding: 10px;
+  max-width: 300px;
+  overflow-y: auto;
+  margin-top: 20px;
+  max-height: 150px;
+  top: 0;
+  left: 0;
+  border: 1px solid #284b63;
+  border-radius: 5px;
+  background-color: white; 
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  scrollbar-width: thin;
+}
+
+.found-words-chart thead {
+  text-align: center;
+  font-size: larger;
+  margin-bottom: 10px;
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.396);
+}
+
+.found-words-chart table {
+  width: 100%;
+  border-collapse: collapse;
+  color: black;
+}
+
+.found-words-chart th,
+.found-words-chart td {
+  border-bottom: 1px solid black;
+}
+
+.found-words-chart th {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.words-grid-item, .word-search-cell {
+    color: black;
+}
+
+.words-container h5 {
+  color: black;
+}
+
+
+@media screen and (max-width: 480px){
+  .found-words-chart th, td{
+    font-size: 13px;
+  }
+
+  
+
+  .found-words-chart {
+    max-height: 100px;
+  }
+
+  
+}
+
+@media screen and (max-width: 769px) and (min-width: 400px){
+  .found-words-chart {
+    max-height: 100px;
+  }
+
+  .found-words-chart th{
+    font-size: 18px;
+  }
+
+}

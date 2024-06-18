@@ -1,0 +1,55 @@
+.type-theme {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #181818;
+}
+
+.type::after {
+    content: '|';
+    animation: cursor 1.1s infinite step-start;
+  }
+   
+  @keyframes cursor {
+    50% {
+      opacity: 0;
+    }
+}
+
+.message-container2{
+  animation: cssAnimation 0s 5s forwards;
+  opacity: 0;
+  background-color: #181818;
+  position: absolute;
+  left: 50%; 
+  top: 50%;
+    transform: translate(-50%, -50%);
+  z-index: 100;
+  border: solid #149414;
+}
+@keyframes cssAnimation {
+  0%   {opacity: 0;}
+  90%  {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.hide-me {
+  -webkit-animation: cssAnimation2 5s forwards; 
+  animation: cssAnimation2 5s forwards;
+}
+@keyframes cssAnimation2 {
+  0%   {opacity: 1;}
+  90%  {opacity: 1;}
+  100% {opacity: 0;   visibility: hidden;}
+}
+
+.name-message{
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  color: #31b231;
+}
+.rabbitimage {
+  max-width:  70%;
+  max-height: 70%;
+}
+

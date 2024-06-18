@@ -1,0 +1,69 @@
+
+.move-counter-container {
+  text-align: center;
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+}
+
+.move-counter {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.dot-Time {
+  align-items: center; 
+  justify-content: center;
+  border-radius: 7px;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  /* height: 58px; */
+  border-style: solid;
+  border-color: #284b63;
+  margin-bottom: 25px;
+  padding: 10px;
+  background-color: white;
+}
+
+.dot-Moves {
+  border-style: solid;
+  border-color: #284b63;
+  width: 75px; 
+  height: 75px;
+  border-radius: 50%;
+  display: flex; 
+  align-items: center; 
+  color: rgb(0, 0, 0);
+  justify-content: center;
+}
+
+.dot-Words{
+  border-style: solid;
+  border-color: #284b63;
+  width: 75px; 
+  height: 75px;
+  border-radius: 50%;
+  display: flex; 
+  align-items: center; 
+  color: rgb(0, 0, 0);
+  justify-content: center;
+}
+
+
+.dot-Score {
+  border-style: solid;
+  border-color: #284b63;
+  width: 75px; 
+  height: 75px;
+  border-radius: 50%;
+  display: flex; 
+  align-items: center; 
+  color: rgb(0, 0, 0);
+  justify-content: center;
+}
+
+.dot-Moves, .dot-Time, .dot-Words{
+  border-width: 5px;
+}

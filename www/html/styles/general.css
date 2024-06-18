@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  margin: 20px 0 0 0;
+  padding: 0 40px 0 40px;
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+  overflow-y: auto;
+}
+
+.head {
+  text-align: center;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+.hook {
+  text-align: center; /* Center text horizontally */
+  line-height: 2; /* Set line height for vertical centering */
+  display: flex; /* Use flexbox for vertical centering */
+  font-size: 50px; /* Adjust the font size as needed */
+  margin-bottom: 20px;
+  align-items: center; /* Center items vertically */
+  justify-content: center; 
+  font-weight: bold;
+  padding-top: 14vh;
+}
+
+section {
+  padding: 2em;
+}

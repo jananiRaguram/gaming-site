@@ -1,0 +1,41 @@
+.nav-pills .nav-link {
+    color: #fff !important; /* Blue text color for the active link */
+}
+  
+.nav-link:hover{
+background-color: black;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+background-color: #41a0a1 !important;
+}
+
+.logo{
+    max-width: 130px;
+}
+
+.logo:hover{
+    background-color: rgb(40, 100, 100);
+    border-radius: 20px;
+}
+
+.navbar-collapse {
+    justify-content: end;
+}
+
+.navbar-toggler{
+    background-color: #41a0a1 !important;
+}
+
+.nav-link{
+    margin: 0px 4px;
+}
+
+
+@media screen and (min-width: 1000px){
+
+    .nav-link{
+        font-size: larger !important;
+    }
+    
+}

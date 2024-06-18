@@ -1,0 +1,29 @@
+.bold {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.big-pan1 {
+  display: flex;
+  justify-content: center;
+}
+ 
+.main_container {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.big-pan .container {
+  display: grid;
+  grid-template-columns: repeat(7, 0.5fr);
+  grid-template-rows: repeat(3, 0.5fr);
+  justify-items: center;
+  gap: 0.5rem;
+  width: 60%;
+  height: 60%;
+}
+
+.restart {
+  background-color: #284b63 !important;
+  color: white !important;
+}

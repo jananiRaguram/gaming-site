@@ -1,0 +1,97 @@
+.wordgame-img {
+  background-image: url('../images/wordgamebackground.png');
+}
+
+.words-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 10px;
+  border-top: solid 2px black;
+  column-gap: 20px;
+}
+
+.words-grid-item {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-family: inherit;
+  text-align: center;
+  width: fit-content;
+  cursor: pointer;
+  outline: none;
+}
+
+.session-title {
+  width: max-content;
+}
+
+.grids {
+  display: flex;
+  justify-content: center;
+}
+
+.near-top-words {
+  position: absolute;
+  margin-bottom: 25%;
+  align-items: center;
+}
+
+.word-search-grid {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  margin: auto;
+}
+
+.word-search-row {
+  display: flex;
+  justify-content: center;
+}
+
+.word-search-cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+
+.words-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.correct-clicked {
+  color: white;
+  background-color: #acd0ea;
+}
+
+/* Smaller screens */
+@media only screen and (max-width: 576px) {
+  .word-search-grid {
+    max-width: 90%; 
+  }
+
+  .word-search-cell {
+    width: 18px;
+    height: 18px;
+    font-size: 10px; 
+  }
+
+  .words-grid-container {
+    grid-template-columns: repeat(2, auto); 
+    justify-content: center; 
+    padding: 5px; 
+    column-gap: 10px; 
+  }
+
+  .words-grid-item {
+    font-size: 12px; 
+  }
+}

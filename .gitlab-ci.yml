@@ -1,0 +1,75 @@
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+stages:
+  - test
+  - accessibility
+  - deploy
+
+image: python:latest
+
+variables:
+  PIP_CACHE_KEY: "pip-$CI_COMMIT_REF_SLUG"
+  NPM_CACHE_KEY: "npm-$CI_COMMIT_REF_SLUG"
+
+cache:
+  paths:
+    - $CI_PROJECT_DIR/.cache/pip
+    - memory-game/node_modules/
+  key: "$PIP_CACHE_KEY-$NPM_CACHE_KEY"
+
+# variables:
+#   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+deploy:
+  stage: deploy
+  image: node:latest
+  before_script:
+    - cd memory-game
+    - npm ci --force
+  script:
+    - npm run build  
+    - chmod 400 $SSH_KEY
+    - scp -i $SSH_KEY -o StrictHostKeyChecking=no -r ./build $SSH_USER@$VM_IPADDRESS:~/ # Copy React build to VM
+    - scp -i $SSH_KEY -o StrictHostKeyChecking=no -r ./server $SSH_USER@$VM_IPADDRESS:~/  # Copy backend server to VM
+    - scp -i $SSH_KEY -o StrictHostKeyChecking=no ./package.json $SSH_USER@$VM_IPADDRESS:~/  # Copy package.json to VM
+    - ssh -i $SSH_KEY -o StrictHostKeyChecking=no $SSH_USER@$VM_IPADDRESS "sudo cp -r /home/sysadmin/build/* /var/www/html"
+    - ssh -i $SSH_KEY -o StrictHostKeyChecking=no $SSH_USER@$VM_IPADDRESS "npm install --force && pm2 kill &&NODE_ENV=production pm2 start --update-env ~/server/backend.js &"
+
+  rules:
+    - if: '$CI_COMMIT_MESSAGE =~ /deploy game/i'
+
+unit-test:
+  image: node:latest
+  stage: test
+  before_script:
+    - cd memory-game
+    - npm install --force
+  script:
+    - npm run test:ci
+  allow_failure: true
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  artifacts:
+    paths:
+      - memory-game/coverage/
+    when: always
+    reports:
+      junit:
+        - memory-game/junit.xml
+
+a11y:
+  stage: accessibility
+  image: "$CI_TEMPLATE_REGISTRY_HOST/gitlab-org/ci-cd/accessibility:6.2.3"
+  script:
+    - /gitlab-accessibility.sh "$a11y_urls"
+  allow_failure: true
+  artifacts:
+    when: always
+    expose_as: 'Accessibility Reports'
+    paths: ['reports/']
+    reports:
+      accessibility: reports/gl-accessibility.json
+  rules:
+    - if: $a11y_urls
+  variables:
+    a11y_urls: "https://cis4250w24-10.socs.uoguelph.ca/"
+

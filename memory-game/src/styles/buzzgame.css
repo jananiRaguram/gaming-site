@@ -1,0 +1,116 @@
+.split-content {
+    display: grid;
+}
+
+.aligcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.counters-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.counter {
+    margin: 0 10px; 
+}
+
+.near-top{
+    margin-bottom: 70px;
+}
+
+.empty-gap{
+    width: 1170px !important;
+}
+
+.delete-btn{
+    background-color: #616b71;
+    /* color: black; */
+    border: grey solid 1px;
+}
+
+.notification {
+    animation-name: slide-up;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+@keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+}
+  
+  
+
+.success-message {
+    color: green;   
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.error-message {
+    color: red;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.notif-row{
+    height: 3em;
+}
+
+.word-row{
+    height: 5em;
+}
+
+@media screen and (max-width: 480px){
+ 
+    .main-content {
+      padding-top: 10vh;
+    }
+
+    .btnclass{
+        width: fit-content;
+        padding: 0px 10px !important;
+    }
+
+    .near-top{
+        margin-bottom: 40px;
+    }
+
+    .success-message, .error-message{
+        font-size: 20px;
+    }
+}
+  
+@media screen and (max-width: 769px) and (min-width: 440px){
+    .main-content {
+        padding-top: 5vh;
+    }
+
+    .btnclass{
+        width: fit-content;
+        padding: 0px 30px !important;
+    }
+
+}
+
+@media screen and (min-width: 800px){
+    .main-content {
+        padding-top: 2vh;
+    }
+
+}

@@ -1,0 +1,171 @@
+body {
+  font-family: sans-serif;
+  margin: 20px 0 0 0;
+  padding: 0 40px 0 40px;
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+  overflow-y: auto;
+}
+
+.head {
+  text-align: center;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+.hook {
+  text-align: center; /* Center text horizontally */
+  line-height: 2; /* Set line height for vertical centering */
+  display: flex; /* Use flexbox for vertical centering */
+  font-size: 50px; /* Adjust the font size as needed */
+  margin-bottom: 20px;
+  align-items: center; /* Center items vertically */
+  justify-content: center;
+  font-weight: bold;
+  padding-top: 14vh;
+}
+
+.cardbackground {
+  background-color: white !important;
+  padding: 5px;
+  margin: 5px;
+}
+
+
+.cardbody {
+  border-radius: 2px;
+  text-align: left;
+}
+
+.cardimg{
+  border: solid #d3d3d3d3 2px;
+}
+
+
+.rowdisplay {
+  padding-top: 20px;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.buttonstyling {
+  float: left;
+}
+
+
+.homepaneldisplay {
+  flex-direction: column;
+  display: flex;
+  /* height: 90vh; */
+  background-color: grey  ;
+  border-radius: 20px;
+}
+
+
+.buttonclass {
+  width: fit-content;
+  max-width: 500px;
+}
+  
+
+.homepaneldisplay:hover {
+  transition: 1s;
+}
+
+.homepaneldisplay2 {
+  background-color: grey  ;
+  flex-direction: column;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+
+.hiddentext {
+  position: absolute;
+  color: grey;
+}
+
+.key-hidden {
+  color: white;
+}
+
+.toggle{
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 15px;
+}
+
+.dialogue{
+  display: flex;
+  flex-direction: row;
+}
+
+.dialogue-container{
+  background-color: #181818;
+  border: solid #149414;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 750px;
+  margin-left: 20px;
+  max-width: 1080px;
+}
+
+.continue-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.dialogue.invisible{
+  transition: opacity 1s ease-in-out; /* Define the transition effect */
+  opacity: 0; 
+}
+
+.continue-button.visible {
+  opacity: 1;
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100%;
+    height: 200px;
+}
+
+
+@media screen and (max-width: 480px){
+ 
+}
+
+@media screen and (max-width: 769px) and (min-width: 400px){
+  .rowdisplay {
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+  }
+  
+}
+
+@media screen and (min-width: 800px){
+  .rowdisplay {
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* margin: 20px 90px 40px 90px; */
+  }
+  
+  
+}

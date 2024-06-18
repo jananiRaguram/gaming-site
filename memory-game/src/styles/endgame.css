@@ -1,0 +1,18 @@
+.end-btns {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+}
+  
+.statsBtn {
+    margin-left: 20px;
+}
+  
+.counters-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  

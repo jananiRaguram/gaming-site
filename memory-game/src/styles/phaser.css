@@ -1,0 +1,42 @@
+
+.homepaneldisplay3 {
+    background-color: grey  ;
+    flex-direction: column;
+
+
+    /* vertical-align: middle; */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 80vh;
+    border-radius: 20px;
+    opacity: 0.5;
+  }
+
+
+  /* .lefttextflashlight {
+    position: left;
+    z-index: -1;
+    position: absolute;
+    left: 150px;
+  } */
+
+  #cursor {
+    background-color:  cyan;
+    height: 350px;
+    width:350px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    transform: translate(-100px,-100px);
+    filter:blur(10px)
+   
+  }
+
+  .hovertexthidden {
+    color: grey;
+    transition: 1s;
+  }
+  .hovertexthidden:hover {
+    color: white;
+  }

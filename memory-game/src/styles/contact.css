@@ -1,0 +1,51 @@
+
+.form-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: 80px;
+}
+
+button{
+  display: block;
+  float: right;
+}
+
+.hook{
+  padding-top: 0;
+}
+
+.titletransition {
+  transition: 2s;
+
+}
+
+.titletransition:hover {
+  opacity: 2;
+  background: linear-gradient(to left,
+    violet,
+    indigo,
+    orange,
+    red);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: bold;
+}
