@@ -1,39 +1,13 @@
 # team_10
 
+Over the course of 4 months I contributed to the the creation of this website that hosts games that my team - Team 10 -  came up with. Our team of 6 created 4 puzzle games that are fun to play and get players on their toes. 
+To get a better idea of what our games are like head over to the [wiki](https://github.com/jananiRaguram/gaming-site/wiki) that goes over the basics of each game. 
+
 ## Our website
  
 https://cis4250w24-10.socs.uoguelph.ca/
 
-### NPM and Node
-
-In addition to converting our work from PHP over to React, we're also adding functionality related to the matching/memory game. At the moment this version can only be run locally but we plan on deploying it next sprint. To run this NPM and Node need to be installed. This can be done through install.sh
-
-## React Code
-
-Our react builds are deployed to the server after each push to the repo. But the code can also be run locally using NPM in the memory-game directory. 
-
-Running the following will open our project on localhost:3000 :
-
-1. `npm ci`
-2. `npm start`
-
-## Getting our git onto the VM
-
-Our .gitlab-ci.yml file will deploy and test pushed code.
-
-How to manually move our files from the git repo onto the website's hosting directory. 
-Do the following:
-
-1. `cd home`
-2. `sudo git clone https://gitlab.socs.uoguelph.ca/cis4250_w24/team_10.git`
-3. `cd team_10`
-4. `sudo git checkout sprint3`
-5. `sudo cd memory-game`
-6. `npm ci`
-7. `npm run build`
-8. `sudo cp -r build/* ../../../../var/www/html`
-
-Nginx should now be able find our files and run it online
+The creation of the website went through it's ups and downs with the design and what games to include but it is complete. Focusing on classic puzzle games we went through user testing and general unit testing, including checking for accessiblity during development. 
 
 ## Testing Outputs
 
